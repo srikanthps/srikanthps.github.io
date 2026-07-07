@@ -19,24 +19,29 @@
     }
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 2.2rem;
     }
     header p {
       margin-top: 0.5rem;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       opacity: 0.9;
     }
     .container {
-      max-width: 900px;
+      max-width: 1100px;
       margin: 2rem auto;
       padding: 0 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
     }
     .card {
+      flex: 1 1 250px;
+      max-width: 300px;
       background: white;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      margin-bottom: 2rem;
-      padding: 2rem;
+      padding: 1.5rem;
       transition: transform 0.2s ease;
     }
     .card:hover {
@@ -45,19 +50,22 @@
     .card h2 {
       margin-top: 0;
       color: #357ab7;
+      font-size: 1.3rem;
     }
     .card p {
-      line-height: 1.6;
-      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
     }
     .btn {
       display: inline-block;
-      padding: 0.7rem 1.5rem;
+      padding: 0.5rem 1rem;
       border-radius: 5px;
       background: #4a90e2;
       color: white;
       text-decoration: none;
       font-weight: bold;
+      font-size: 0.9rem;
       transition: background 0.3s ease;
     }
     .btn:hover {
@@ -65,9 +73,9 @@
     }
     footer {
       text-align: center;
-      padding: 1.5rem;
+      padding: 1.2rem;
       background: #eee;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: #555;
     }
   </style>
@@ -82,14 +90,21 @@
     <div class="card">
       <h2>Stories and Novels</h2>
       <p>A curated collection of short stories and novels exploring diverse themes, characters, and worlds. From the streets of Malgudi to the future landscapes of sci-fi thrillers.</p>
-      <a href="#stories" class="btn">Explore Stories</a>
+      <a href="/Stories-And-Novels" class="btn">Explore Stories</a>
     </div>
 
     <div class="card">
       <h2>Learn Kannada</h2>
       <p>A tutorial to read and write Kannada.</p>
-      <a href="#learn-kannada" class="btn">Let's Start</a>
+      <a href="/kannada-gh" class="btn">Let's Start</a>
     </div>
+
+    <div class="card">
+      <h2>Play Chess using Textual Notations Only</h2>
+      <p>Discover and master chess notations.</p>
+      <a href="/text-chess" class="btn">Read Poems</a>
+    </div>
+
   </div>
 
   <footer>
