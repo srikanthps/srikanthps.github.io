@@ -8,23 +8,31 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f9f9f9;
+      background: linear-gradient(135deg, #fdfbfb, #ebedee);
       color: #333;
     }
     header {
-      background: linear-gradient(135deg, #4a90e2, #357ab7);
+      background: linear-gradient(270deg, #4a90e2, #ff6f61, #357ab7);
+      background-size: 600% 600%;
+      animation: gradientShift 12s ease infinite;
       color: white;
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 2.5rem 1rem;
+    }
+    @keyframes gradientShift {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
     }
     header h1 {
       margin: 0;
-      font-size: 2.2rem;
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
     }
     header p {
       margin-top: 0.5rem;
-      font-size: 1.1rem;
-      opacity: 0.9;
+      font-size: 1.2rem;
+      opacity: 0.95;
     }
     .container {
       max-width: 1100px;
@@ -39,13 +47,23 @@
       flex: 1 1 250px;
       max-width: 300px;
       background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
       padding: 1.5rem;
-      transition: transform 0.2s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .card::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 5px;
+      background: linear-gradient(90deg, #ff6f61, #4a90e2, #fbc02d);
     }
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.15);
     }
     .card h2 {
       margin-top: 0;
@@ -59,23 +77,25 @@
     }
     .btn {
       display: inline-block;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      background: #4a90e2;
+      padding: 0.6rem 1.2rem;
+      border-radius: 25px;
+      background: linear-gradient(135deg, #ff6f61, #fbc02d);
       color: white;
       text-decoration: none;
       font-weight: bold;
       font-size: 0.9rem;
-      transition: background 0.3s ease;
+      transition: all 0.3s ease;
     }
     .btn:hover {
-      background: #357ab7;
+      background: linear-gradient(135deg, #4a90e2, #357ab7);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transform: scale(1.05);
     }
     footer {
       text-align: center;
-      padding: 1.2rem;
+      padding: 1.5rem;
       background: #eee;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       color: #555;
     }
   </style>
@@ -104,7 +124,6 @@
       <p>Discover and master chess notations.</p>
       <a href="/text-chess" class="btn">Read Poems</a>
     </div>
-
   </div>
 
   <footer>
